@@ -1,8 +1,3 @@
-# MERN-stack-
-MERN stack (MongoDB, Express, React/Node). Using Visual Studio Code (VS Code)- Content Management System or a basic Social Network API
-
-
-This project was 
 # Blog Engine API (MEN Stack)
 
 ## Project Overview
@@ -53,11 +48,11 @@ npm run dev
 📌 API EndpointsThe API is fully functional for managing articles. 
 | Method | Endpoint | Description| Status Codes
 | :--- | :--- | :--- | :--- |
-| POST | /api/articles | Creates a new article. | "201 (Created) 400 (Bad Request)"|
-| GET | /api/articles | "Retrieves all articles sorted by creation date." | 200 (OK)|
-| GET | /api/articles/ | :id Retrieves a single article by its MongoDB ID. | "200 (OK), 404 (Not Found)"|
-| PUT | /api/articles/ | :id Updates an existing article with new data. | "200 (OK), 404 (Not Found), 400 (Validation Error)"|
-| DELETE | /api/articles/ | :id,Deletes a specified article. | "200 (OK), 404 (Not Found)"|
+| POST | /api/articles | Creates a new article. | 201 (Created) 400 (Bad Request) |
+| GET | /api/articles | Retrieves all articles sorted by creation date. | 200 (OK)|
+| GET | /api/articles/ | :id Retrieves a single article by its MongoDB ID. | 200 (OK), 404 (Not Found)|
+| PUT | /api/articles/ | :id Updates an existing article with new data. | 200 (OK), 404 (Not Found), 400 (Validation Error)|
+| DELETE | /api/articles/ | :id,Deletes a specified article. | 200 (OK), 404 (Not Found) |
 
 ---------------------------------------------------------------------------------------------------------
 Example Request Body (POST / PUT)
@@ -69,9 +64,9 @@ Example Request Body (POST / PUT)
 }
 ---------------------------------------------------------------------------------------------------------
 
-📂 File Structure
+## 📂 File Structure
 The project follows a modular structure to separate concerns (routes, models, database connection):
-
+```
 /blog-engine-api
 ├── node_modules/
 ├── .env
@@ -82,27 +77,25 @@ The project follows a modular structure to separate concerns (routes, models, da
 ├── /models
 │   └── Article.js          # Mongoose Schema definition
 └── /routes
-    └── articleRoutes.js    # Express routing and controller logic
+```
 
 
 
 
+## Some learning in this project----> ##
 
 
 
 
-
-
-
-Some learning in this project---->
 ✔️ server.js file was trying to execute the data base before the variables of the env load the proccess
 -----------------------------------------
-   ✅ Solution = reorder the dotenv code line:
-   require('dotenv').config(); (This line should be the first onee in the "server.js" file)
-   (this had to be the very first line in the code)
+
+ ✅ Solution = reorder the dotenv code line:
+ require('dotenv').config(); (This line should be the first onee in the "server.js" file)
+ (this had to be the very first line in the code)
 -----------------------------------------
 
-✔️Make sure the file .env is writed ✅"MONGODB_URI" instead "MONGODB_URL"
+✔️ Make sure the file .env is writed ✅"MONGODB_URI" instead "MONGODB_URL"
 ------------------------------------------
 
 ✔️ Other 
@@ -121,5 +114,11 @@ Postman had troubles Posting my json file because the actual IP adress needed to
 under / Security/Data Base and Network Acess/ IP Access List
 Issue solved ✅ We got the post! (I think it was my antivirus VPN)
 
-**Nodemon acualize the changes in the .js files automatically so that was a big help**
-**sing MongoDB for VS Code extention for vscode was helpfull too**
+** Nodemon acualize the changes in the .js files automatically so that was a big help **
+** Using MongoDB for VS Code extention for vscode was helpfull too **
+
+
+
+
+
+
